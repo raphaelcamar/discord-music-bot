@@ -68,7 +68,7 @@ module.exports = class MusicSubscription {
 
 				(oldState.resource).metadata.onFinish();
 
-				void this.processQueue();
+				this.processQueue();
 
 			} else if (newState.status === AudioPlayerStatus.Playing) {
 
@@ -84,7 +84,7 @@ module.exports = class MusicSubscription {
 
 	enqueue(track) {
 		this.queue.push(track);
-		void this.processQueue();
+		this.processQueue();
 	}
 
 	stop() {
